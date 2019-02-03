@@ -3,14 +3,47 @@ import React from "react";
 
 const Weather = (props) => {
   return(
-    <div>
-      <h1>Weather Component</h1>
-      { props.city && props.country && <p> Location: { props.city }, { props.country} </p> }
-      { props.temperature && <p> Temperature: { props.temperature } &#8451; </p> }
-      { props.humidity && <p> Humidity: { props.humidity } </p>}
-      { props.description && <p> Conditions: { props.description } </p>}
-      { props.wind && props.wind_deg && <p> Wind Conditions: Speed: { props.wind } km/h,  Direction: { props.wind_deg } &#176; </p>}
-      { props.error && <p> {props.error} </p>}
+    <div className="weather__info">
+      {
+         props.city && props.country &&
+         <p className="weather__key">
+         Location:
+         <span className="weather__value"> { props.city }, { props.country} </span>
+         </p>
+      }
+      {
+         props.temperature &&
+         <p className="weather__key">
+         Temperature:
+         <span className="weather__value"> { props.temperature } &#8451; </span>
+        </p>
+      }
+      {
+         props.humidity &&
+         <p className="weather__key">
+         Humidity: <span className="weather__value">
+          { props.humidity }
+         </span>
+
+         </p>
+      }
+      {
+         props.description && <p className="weather__key">
+         Conditions:
+         <span className="weather__value"> { props.description }
+         </span>
+        </p>
+      }
+      {
+         props.wind && props.wind_deg && <p className="weather__key">
+         Wind Conditions:
+         Speed: <span className="weather__value"> { props.wind } km/h </span>,
+         Direction: <span className="weather__value">
+        { props.wind_deg } &#176; </span> </p>
+      }
+      {
+         props.error && <p className="weather__error"> {props.error} </p>
+      }
     </div>
   );
 }
