@@ -37,7 +37,7 @@ const Weather = (props) => {
       {
          props.wind && props.wind_deg && <p className="weather__key">
          Wind Conditions:
-         Speed: <span className="weather__value"> { props.wind } km/h </span>,
+         Speed: <span className="weather__value"> { props.wind } km/h</span>,
          Direction: <span className="weather__value">
         { props.wind_deg } &#176; </span> </p>
       }
