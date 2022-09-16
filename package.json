@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://h-richard.github.io/react-weather-app",
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
